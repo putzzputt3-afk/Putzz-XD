@@ -1,0 +1,54 @@
+:root{
+  --bg:#f6f9fc;
+  --card:#ffffff;
+  --muted:#6b7280;
+  --primary:#0f6cff;
+  --accent:#06b6d4;
+  --danger:#ef4444;
+}
+*{box-sizing:border-box}
+body{
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--bg),#eef6ff);
+  margin:0;color:#0f1724;
+}
+.wrap{max-width:1200px;margin:28px auto;padding:20px}
+header{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px}
+.head-text h1{font-size:20px;margin:0}
+.lead{margin:6px 0 0;color:var(--muted)}
+.byline{color:var(--muted);margin-top:6px;font-size:14px}
+
+.card{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 8px 28px rgba(15,20,36,0.06)}
+.field{margin-bottom:14px}
+label{display:block;font-weight:700;margin-bottom:8px}
+input[type=text]{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;font-size:15px}
+
+.questions-area{margin-top:6px}
+.question{border:1px solid #eef4fb;padding:14px;border-radius:10px;margin-bottom:12px}
+.q-title{font-weight:700;margin-bottom:8px}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:12px;align-items:flex-start;padding:10px;border-radius:8px;border:1px solid transparent;cursor:pointer}
+.opt:hover{background:#fbfdff}
+.opt input{margin-top:4px}
+
+.controls{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:12px}
+.left-controls,.right-controls{display:flex;gap:8px}
+.btn{border:0;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.ghost{background:transparent;color:var(--muted);border:1px solid #f1f5f9;padding:9px 12px}
+.btn.danger{background:var(--danger);color:#fff}
+
+.results{margin-top:18px}
+.table-wrap{margin-top:10px;overflow:auto}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px;border-bottom:1px solid #f1f5f9;text-align:left}
+th{background:#fbfdff}
+.small{font-size:13px}
+.muted{color:var(--muted)}
+
+@media (max-width:900px){
+  .wrap{padding:12px}
+  .logo{width:48px;height:48px;font-size:16px}
+  .controls{flex-direction:column;align-items:flex-start;gap:8px}
+}
